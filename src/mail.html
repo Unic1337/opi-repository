@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="./assets/favicon.ico">
+   <link rel="stylesheet" href="./styles/reset.css">
+   <link rel="stylesheet" href="./styles/mail.css">
+   <title>Почтовая служба</title>
+</head>
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container _container">
+            <nav class="nav">
+               <div class="nav__logo">
+                  <h2 class="nav__title">ПОЧТА САНКТ-ПЕТЕРБУРГА</h2>
+               </div>
+               
+               <ul class="nav__links">
+                  <li class="nav__link">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.796 12.738L12 20.274l-4.796-7.537C4.795 8.953 7.514 4 12 4c4.486 0 7.205 4.953 4.796 8.738zM5.516 13.81C2.26 8.695 5.936 2 12 2s9.74 6.695 6.484 11.811l-4.797 7.538a2 2 0 01-3.374 0L5.516 13.81zM12 12a2 2 0 100-4 2 2 0 000 4z" fill="currentColor"></path></svg>
+                     Отделения
+                  </li>
+                  <li class="nav__link">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 20a8 8 0 100-16 8 8 0 000 16zm0 2c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm1.25-5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zm.397-10.294a3.683 3.683 0 00-4.941 1.647l-.1.2a1 1 0 001.788.894l.1-.2a1.684 1.684 0 012.259-.753l.11.056c.254.127.46.333.587.587a.85.85 0 01-.216 1.033l-1.155.962A3 3 0 0011 13.437v.063a1 1 0 102 0v-.063a1 1 0 01.36-.768l1.155-.963a2.85 2.85 0 00.724-3.464 3.313 3.313 0 00-1.481-1.481l-.11-.055z" fill="currentColor"></path></svg>
+                     Помощь
+                  </li>
+                  <li class="nav__link">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.932 17.368a8 8 0 10-11.894-.034C7.433 15.86 9.752 15 12 15c2.112 0 4.493.986 5.932 2.368zM12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm3.5-12a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" fill="currentColor"></path></svg>
+                     Аккаунт
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+
+      <main class="main">
+         <section class="top__section">
+            <section class="section__image">
+               <img src="/src/assets/pochta.webp" alt="car" class="sec__img">
+               <div>
+                  <div >Почтовые сервисы всегда под рукой</div>
+                  <p class="desc">Удобные онлайн-сервисы Почты для физических и&nbsp;юридических лицна&nbsp;одной странице</p>
+                  <span class="button_sec">Подключить</span>
+               </div>
+            </section>
+            <section class="main__route route">
+               <div class="route__container _container">
+                  <h3 class="route__title">Отправить посылку</h3>
+                  <form action="" class="form" id="form">
+                     <div class="form__inputs">
+                        <input required class="form__input" type="text" minlength="2" maxlength="100" name="placeFromInput" id="placeFromInput" placeholder="Откуда">
+                        <input required class="form__input" type="text" minlength="2" maxlength="100" name="placeToInput" id="placeToInput" placeholder="Куда">                        
+                        <input required class="form__input" type="date" min="2023-12-10" name="dateFromInput" id="dateFromInput" placeholder="Туда">                    
+                        <input required class="form__input" type="text" minlength="5" maxlength="100" name="fioInput" id="fioInput" placeholder="ФИО">                        
+                        <div class="button__div">
+                           <button class="form__button" type="submit" onclick="addData()">Добавить</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </section>
+         </section>
+
+         <section class="main__route-list route-list">
+            <div class="route-list__container _container">
+               <table class="table" id="table">
+                  <tr>
+                     <th>№</th>
+                     <th>Откуда</th>
+                     <th>Куда</th>
+                     <th>Трек-номер</th>
+                     <th>Дата отправки</th>
+                     <th>Примерная дата прибытия</th>
+                     <th>ФИО заказчика</th>
+                     <th>Редактирование</th>
+                  </tr>
+               </table>
+            </div>
+               
+         </section>
+
+         <div class="_container">
+           
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer__div">
+            <div>
+               <span>2023<!-- --> © АО Почта Санкт-Петербурга</span>
+            </div>
+            <div>
+               <a target="_self" rel="">
+                  <span>Помощь</span>
+               </a>
+               <a target="_self" rel="">
+                  <span>Контакты</span>
+               </a>
+            </div>
+            <div>
+               <div class="icons">
+                  <div>
+                     <a title="Vk" target="_blank" rel="noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon-sc-jviuxr-0 gncwbQ"><path d="M12.893 18.5C6.06 18.5 2.163 13.808 2 6h3.423c.112 5.73 2.636 8.158 4.634 8.659V6h3.223v4.942c1.974-.212 4.048-2.465 4.747-4.942h3.223c-.537 3.053-2.785 5.305-4.384 6.231 1.599.751 4.16 2.715 5.134 6.269h-3.548c-.762-2.377-2.66-4.217-5.172-4.467V18.5h-.387z" fill="currentColor"></path></svg>
+                     </a>
+                  </div>
+                  <div>
+                     <a title="Однокласники" target="_blank" rel="noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon-sc-jviuxr-0 gncwbQ"><path d="M12 5c1.11 0 2.012.902 2.012 2.012A2.013 2.013 0 0112 9.02a2.013 2.013 0 01-2.012-2.008C9.988 5.902 10.891 5 12 5zm0 7.008a4.998 4.998 0 10-.004-9.996A4.998 4.998 0 0012 12.008zm1.965 3.82a8.975 8.975 0 002.82-1.168 1.423 1.423 0 00-1.515-2.406 6.17 6.17 0 01-6.54 0 1.423 1.423 0 10-1.515 2.406 8.938 8.938 0 002.82 1.168l-2.719 2.719a1.42 1.42 0 00.004 2.012 1.418 1.418 0 002.012 0L12 17.89l2.672 2.668a1.424 1.424 0 002.012 0 1.424 1.424 0 000-2.012l-2.72-2.719z" fill="currentColor"></path></svg>
+                     </a>
+                  </div>
+                  <div>
+                     <a title="Телеграм" target="_blank" rel="noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon-sc-jviuxr-0 gncwbQ"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.01 12.005c0 5.526-4.48 10.005-10.005 10.005C6.48 22.01 2 17.53 2 12.005 2 6.48 6.48 2 12.005 2 17.531 2 22.01 6.48 22.01 12.005zm-5.234-3.499c.087-.983-.954-.578-.954-.578-.768.317-1.561.64-2.363.966-2.484 1.01-5.05 2.055-7.237 3.082-1.186.434-.492.868-.492.868l1.88.578c.867.26 1.33-.029 1.33-.029l4.048-2.747c1.446-.983 1.1-.173.752.174l-3.036 2.891c-.463.405-.231.752-.029.926.574.504 1.985 1.428 2.6 1.831.161.105.268.175.292.193.144.115.925.636 1.445.52.521-.115.579-.78.579-.78l.694-4.54c.104-.789.223-1.546.319-2.151.09-.572.158-1.007.172-1.204z" fill="currentColor"></path></svg>
+                     </a>
+                  </div>
+                  <div>
+                     <a title="Телеграм" target="_blank" rel="noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Icon-sc-jviuxr-0 gncwbQ"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.01 12.005c0 5.526-4.48 10.005-10.005 10.005C6.48 22.01 2 17.53 2 12.005 2 6.48 6.48 2 12.005 2 17.531 2 22.01 6.48 22.01 12.005zm-5.234-3.499c.087-.983-.954-.578-.954-.578-.768.317-1.561.64-2.363.966-2.484 1.01-5.05 2.055-7.237 3.082-1.186.434-.492.868-.492.868l1.88.578c.867.26 1.33-.029 1.33-.029l4.048-2.747c1.446-.983 1.1-.173.752.174l-3.036 2.891c-.463.405-.231.752-.029.926.574.504 1.985 1.428 2.6 1.831.161.105.268.175.292.193.144.115.925.636 1.445.52.521-.115.579-.78.579-.78l.694-4.54c.104-.789.223-1.546.319-2.151.09-.572.158-1.007.172-1.204z" fill="currentColor"></path>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <script src="./js/mail.js"></script>
+</body>
+</html>
